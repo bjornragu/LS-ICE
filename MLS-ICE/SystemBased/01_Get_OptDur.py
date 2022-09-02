@@ -1,6 +1,7 @@
 '''
 The script identifies the optimal duration for all locations deemed important by system based MLS-ICE.
-The script takes as input list containing the important locations (imported in line 79), a grid of candidate duration values for each location (imported in line 35) and an event log (imported in line 69).
+The script takes as input list containing the important locations (imported in line 80), 
+a grid of candidate duration values for each location (imported in line 36) and an event log (imported in line 70).
 '''
 
 import os
