@@ -54,7 +54,10 @@ def get_location_config(log, location, threshold = 50):
             best = None
 
             for diff in duration_range:
-                load = log.loc[log.activity == location, ]                        .groupby(['ts']).count().asfreq('1S')                        .shift(1, freq=pd.DateOffset(hours=offset))                        .rolling(f"{diff}min").count()['ts_col']
+                load = log.loc[log.activity == location, ]\                        
+                    .groupby(['ts']).count().asfreq('1S')\                        
+                    .shift(1, freq=pd.DateOffset(hours=offset))\                        
+                    .rolling(f"{diff}min").count()['ts_col']
 
                 relation = get_rf_relation(target_log, load, depth = 3)
                 if best is None or relation > best[0]:
