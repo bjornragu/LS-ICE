@@ -1,3 +1,8 @@
-# MLS-ICE
-Illustrates the use of the MLS-ICE framework for generating inter-case features.
-Further details are provided in the subdirectories, i.e. MLS-ICE/CaseBased and MLS-ICE/SystemBased.
+# LS-ICE: A Load State Intercase Encoding framework for improved predictive monitoring of business processes
+Supplementary material for the article "LS-ICE: A Load State Intercase Encoding framework for improved predictive monitoring of business processes" authored by Björn Rafn Gunnarsson, Seppe vanden Broucke and Jochen De Weerdt.
+
+The code provided in this repository can be readily used to enriches events in an event log with a depiction of the state of relevant load points in a business process. Two distinct approaches are available for identifying relevant load points: a system-based and a case-based approach. Additionally, the framework supports two approaches for deriving the load state at a load point, namely, counting the number of active cases and counting the number of cases within an optimal time window.
+
+## Abstract
+Research on developing techniques for predictive process monitoring has generally relied on feature encoding schemes that extract intra-case features from events to make predictions. In doing so, the processing of cases is assumed to be solely influenced by the attributes of the cases themselves. However, cases are not processed in isolation and can be influenced by the processing of other cases or, more generally, the state of the process under investigation. In this work, we propose the LS-ICE (load state intercase encoding) framework for encoding intercase features that enriches events with a depiction of the state of relevant load points in a business process. To assess the benefits of the intercase features generated using the LS-ICE framework, we compare the performance of predictive process monitoring models constructed using the encoded features against baseline models without these features. The models are evaluated for remaining trace and runtime prediction using five real-life event logs. Across the board, a consistent improvement in performance is noted for models that integrate intercase features encoded through the proposed framework, as opposed to baseline models that lack these encoded features.
+
